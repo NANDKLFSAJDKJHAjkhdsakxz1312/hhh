@@ -1,0 +1,27 @@
+# Architectures
+vgg_like.base_filters = 8
+vgg_like.n_blocks = 3
+vgg_like.dense_units = 32
+vgg_like.dropout_rate = 0.2
+simple_cnn.base_filters = 8
+simple_cnn.n_blocks = 2
+simple_cnn.dense_units = 32
+simple_cnn.dropout_rate = 0.2
+
+# Layers
+vgg_block.kernel_size = (3, 3)
+cnn_block.kernel_size = (3, 3)
+
+# Training
+train.Trainer.total_steps =50
+train.Trainer.log_interval = 10
+train.Trainer.ckpt_interval = 10
+
+# Input pipeline
+load.name = 'idrid'
+load.data_dir = 'D:\PycharmProjects\dl-lab-23w-team03\diabetic_retinopathy'
+preprocess.img_height = 256
+preprocess.img_width = 256
+prepare.batch_size = 32
+prepare.caching = True
+prepare_image_paths_and_labels.data_dir = 'D:\idrid\IDRID_dataset'
